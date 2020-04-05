@@ -10,7 +10,7 @@ ENV AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
 
 COPY requirements.txt requirements-dev.txt ./ # no src code yet
 
-RUN pip install -U pip && \
-    pip install --no-cache-dir -U -r requirements.txt -r requirements-dev.txt
+RUN pip install -U pip-tools && \
+    pip-sync requirements.txt requirements-dev.txt
 
 COPY . .

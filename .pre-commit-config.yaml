@@ -1,3 +1,5 @@
+# https://pre-commit.com/#quick-start
+
 repos:
 
     - repo: local

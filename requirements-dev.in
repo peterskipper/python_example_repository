@@ -1,0 +1,7 @@
+# -c: constrain requirements to what's allowed in requirements.txt
+-c requirements.txt
+
+black
+pip-tools
+pre-commit
+pytest
