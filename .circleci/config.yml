@@ -1,0 +1,15 @@
+version: 2.1
+jobs:
+    build:
+        docker:
+            - image: circleci/golang:1.1.13-alpine
+              environment:
+                  TAG: "0.0.0"
+        steps:
+            - checkout
+            # build and push Docker image
+            - run: |
+                docker build -t peterskipper/python-example-repository:$TAG .
+                echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+                docker push peterskipper/python-example-repository:$TAG
+
