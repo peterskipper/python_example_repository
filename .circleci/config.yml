@@ -2,7 +2,7 @@ version: 2.1
 jobs:
     build:
         docker:
-            - image: circleci/golang:1.1.13-alpine
+            - image: cimg/go:1.13
               environment:
                   TAG: "0.0.0"
         steps:
